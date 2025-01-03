@@ -1,0 +1,89 @@
+/* 기본 스타일 설정 */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  overflow: hidden;
+  transition: background-color 1s ease;
+}
+
+/* 화면 전체를 차지하는 인트로 */
+.intro-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0073e6;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 1s ease;
+  text-align: center;
+}
+
+/* 텍스트 애니메이션 */
+.intro-content h1 {
+  font-size: 3em;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.intro-content p {
+  font-size: 1.5em;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 1.5s ease-out 0.5s forwards;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #ffffff;
+  color: #0073e6;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 1.5s ease-out 1s forwards;
+}
+
+button:hover {
+  background-color: #00b3b3;
+  color: white;
+}
+
+/* 본문 스타일 */
+.main-content {
+  display: none;
+  padding: 40px;
+  text-align: center;
+}
+
+/* 애니메이션 정의 */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 배경 전환 애니메이션 */
+@keyframes fadeBackground {
+  0% {
+    background-color: #0073e6;
+  }
+  100% {
+    background-color: #f4f4f4;
+  }
+}
